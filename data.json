@@ -1,0 +1,19 @@
+[{
+  "id": 1,
+  "first_name": "Ray",
+  "last_name": "Dakin",
+  "email": "rdakin0@engadget.com",
+  "gender": "Female"
+}, {
+  "id": 2,
+  "first_name": "Cchaddie",
+  "last_name": "Raoul",
+  "email": "craoul1@etsy.com",
+  "gender": "Male"
+}, {
+  "id": 3,
+  "first_name": "Vita",
+  "last_name": "Sparshatt",
+  "email": "vsparshatt2@i2i.jp",
+  "gender": "Female"
+}]
