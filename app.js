@@ -34,6 +34,16 @@ app.put('/:id', (req, res) => {
   res.status(200).json({ message: 'Data Updated Successfully' });
 });
 
-
+// === Delete Data ====
+app.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  const userIndex = jsonData.findIndex((user) => user.id === id);
+  if (userIndex === -1) {
+    return res.status(404).json({ message: 'Data not found' });
+  }
+  jsonData.splice(userIndex, 1);
+  fs.writeFileSync('./data.json', JSON.stringify(jsonData));
+  res.status(200).json({ message: 'Data Deleted Successfully' });
+});
 const PORT = 4000;
 app.listen(PORT, () => console.log(`App listen on port ${PORT}`));
