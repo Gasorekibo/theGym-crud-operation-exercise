@@ -22,6 +22,18 @@ app.post('/', (req, res) => {
   res.status(201).json({ message: 'New Data Created Successfully' });
 });
 
+// === Update Data ===
+app.put('/:id', (req, res) => {
+  const { id } = req.params;
+  const userIndex = jsonData.findIndex((user) => user.id === id);
+  if (userIndex === -1) {
+    return res.status(404).json({ message: 'User not found' });
+  }
+  jsonData[userIndex] = { ...jsonData[userIndex], ...req.body };
+  fs.writeFileSync('./data.json', JSON.stringify(jsonData));
+  res.status(200).json({ message: 'Data Updated Successfully' });
+});
+
 
 const PORT = 4000;
 app.listen(PORT, () => console.log(`App listen on port ${PORT}`));
