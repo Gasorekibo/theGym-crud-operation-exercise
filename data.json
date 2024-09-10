@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1a011df4-978c-4add-bce8-461f20d78f06",
+    "first_name": "Mugisha",
+    "last_name": "Eric",
+    "email": "m.eric@gmail.com",
+    "gender": "male"
+  },
+  {
+    "id": "285b3d29-171c-4189-9448-c549d4477d72",
+    "first_name": "Johnson",
+    "last_name": "jacob",
+    "email": "j.jackob@gmail.com",
+    "gender": "male"
+  }
+]
